@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "title": "CS50's Introduction to Artificial Intelligence with Python",
+    "issuer": "Harvard University",
+    "date": "2025",
+    "description": "Comprehensive course covering search algorithms, knowledge representation, uncertainty, optimization, machine learning, and natural language processing using Python.",
+    "image": "assets/certs/cs50ai.png",
+    "verifyUrl": "https://certificates.cs50.io/9fb9f4d8-51e1-44e9-8d0a-8df27fbc3449.pdf",
+    "tags": ["AI", "Python", "Machine Learning"]
+  },
+    {
+    "id": 2,
+    "title": "Full Stack Web Development Megacourse: Beginner to Expert",
+    "issuer": "Udemy",
+    "date": "2025",
+    "description": "Master Web Development from Scratch - Front-End, Back-End, Databases, and Real-World Projects!",
+    "image": "assets/certs/UC-1a478ee3-1d1e-4783-81b0-ac4acda2c201.jpg",
+    "verifyUrl": "https://www.udemy.com/certificate/UC-1a478ee3-1d1e-4783-81b0-ac4acda2c201/",
+    "tags": ["Full Stack", "Web Development", "JavaScript", "Databases"]
+  },
+  {
+    "id": 3,
+    "title": "ICDL - International Computer Driving License",
+    "issuer": "Technical and Vocational Training",
+    "date": "2019",
+    "description": "International certification covering essential computer skills including word processing, spreadsheets, presentations, and database fundamentals.",
+    "image": null,
+    "verifyUrl": null,
+    "tags": ["General IT", "Office", "Basics"]
+  }
+
+]

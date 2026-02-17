@@ -1,0 +1,225 @@
+[
+  {
+    "id": 1,
+    "name": "Soft Clustering Python Library",
+    "client": "Open Source Contribution",
+    "period": "2024",
+    "description": "Contributed to a library implementing over 40 key soft clustering algorithms from scientific papers.",
+    "thumbnail": "assets/projects/clustering-thumb.png",
+    "gallery": [],
+    "visibility": "public",
+    "links": {
+      "live": null,
+      "github": "https://github.com/soft-clustering/soft-clustering"
+    },
+    "tags": [
+      {
+        "label": "Completed",
+        "type": "status"
+      },
+      {
+        "label": "Python",
+        "type": "skill"
+      },
+      {
+        "label": "NumPy",
+        "type": "skill"
+      },
+      {
+        "label": "scikit-learn",
+        "type": "skill"
+      },
+      {
+        "label": "Open Source",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Foodio",
+    "client": "Personal / Public",
+    "period": "November 2025 - Present",
+    "description": "Foodio is a Flutter-based and web automation platform designed to automate the food reservation process for all users in Iranian universities using the Samad system, eliminating manual reservations and streamlining operations across campuses.",
+    "thumbnail": "assets/projects/foodio-thumb.png",
+    "gallery": [
+      "assets/projects/foodio1.jpg",
+      "assets/projects/foodio2.jpg",
+      "assets/projects/foodio3.jpg",
+      "assets/projects/foodio4.jpg"
+    ],
+    "visibility": "public",
+    "links": {
+      "live": null,
+      "github": "https://github.com/hesamzs/Foodio"
+    },
+    "tags": [
+      {
+        "label": "In Progress",
+        "type": "status"
+      },
+      {
+        "label": "Flutter",
+        "type": "skill"
+      },
+      {
+        "label": "Web Automation",
+        "type": "skill"
+      },
+      {
+        "label": "Python",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Sales & Banking Data Reconciliation System",
+    "client": "Azarpajooh",
+    "period": "June 2025 - Present",
+    "description": "A web-based system to integrate, analyze, and reconcile sales and banking data, eliminating 100% manual data entry and reducing operational errors by 20%.",
+    "thumbnail": "assets/projects/reconciliation-thumb.png",
+    "gallery": [
+      "assets/projects/reconciliation1.png",
+      "assets/projects/reconciliation2.png",
+      "assets/projects/reconciliation3.png",
+      "assets/projects/reconciliation4.png"
+    ],
+    "visibility": "private",
+    "links": {
+      "live": null,
+      "github": null
+    },
+    "tags": [
+      {
+        "label": "In Progress",
+        "type": "status"
+      },
+      {
+        "label": "Python",
+        "type": "skill"
+      },
+      {
+        "label": "Django",
+        "type": "skill"
+      },
+      {
+        "label": "PostgreSQL",
+        "type": "skill"
+      },
+      {
+        "label": "REST API",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Energy Consumption Management System",
+    "client": "Private Company",
+    "period": "December 2024 - February 2025",
+    "description": "An automation-focused energy consumption management system developed for a private organization. The platform integrates with a primary external system to securely download periodic PDF reports, extract structured numerical data, and process it using custom analytical formulas. Based on calculated metrics and optimization models, the system generates actionable energy efficiency recommendations for end users. The solution includes automated authentication handling, session persistence, caching mechanisms, PDF parsing, and data processing pipelines to streamline reporting and reduce manual intervention.",
+    "thumbnail": "assets/projects/energy-thumb.png",
+    "gallery": [
+      "assets/projects/energy1.png",
+      "assets/projects/energy2.png",
+      "assets/projects/energy3.png",
+      "assets/projects/energy4.png"
+    ],
+    "visibility": "private",
+    "links": {
+      "live": null,
+      "github": null
+    },
+    "tags": [
+      {
+        "label": "Completed",
+        "type": "status"
+      },
+      {
+        "label": "Python",
+        "type": "skill"
+      },
+      {
+        "label": "Web Scraping",
+        "type": "skill"
+      },
+      {
+        "label": "Automation",
+        "type": "skill"
+      },
+      {
+        "label": "PDF Processing",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Soybean Image Classification",
+    "client": "University Project",
+    "period": "2024",
+    "description": "Implemented traditional image processing algorithms and machine learning techniques for automated classification and categorization of soybean grains.",
+    "thumbnail": null,
+    "gallery": [],
+    "visibility": "private",
+    "links": {
+      "live": null,
+      "github": null
+    },
+    "tags": [
+      {
+        "label": "Completed",
+        "type": "status"
+      },
+      {
+        "label": "Python",
+        "type": "skill"
+      },
+      {
+        "label": "OpenCV",
+        "type": "skill"
+      },
+      {
+        "label": "scikit-learn",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Educational Content Data Pipeline",
+    "client": "eltshop.ir",
+    "period": "February 2025 - November 2025",
+    "description": "A data pipeline for scraping and normalizing educational content from various online sources, reducing data access time by 70% and tripling the processed data volume. Includes AI modules for automatic metadata generation.",
+    "thumbnail": "assets/projects/data-pipeline-thumb.png",
+    "gallery": [],
+    "visibility": "private",
+    "links": {
+      "live": null,
+      "github": null
+    },
+    "tags": [
+      {
+        "label": "Completed",
+        "type": "status"
+      },
+      {
+        "label": "Python",
+        "type": "skill"
+      },
+      {
+        "label": "Data Scraping",
+        "type": "skill"
+      },
+      {
+        "label": "Selenium",
+        "type": "skill"
+      },
+      {
+        "label": "AI/ML",
+        "type": "skill"
+      }
+    ]
+  }
+]

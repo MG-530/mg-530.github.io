@@ -1,0 +1,30 @@
+{
+  "name": "Seyed Mohammad Ghoreishi",
+  "title": "Python Developer",
+  "bio": "Full-Stack Developer with a focus on Python and Django, possessing hands-on experience in developing software solutions, process automation (RPA), and data scraping. Enthusiastic about integrating AI and machine learning techniques into web applications to build intelligent and data-driven products.",
+  "email": "mohammad.ghoreishi530@gmail.com",
+  "phone": "+98 903 315 8258",
+  "location": "Iran",
+  "links": {
+    "linkedin": "https://linkedin.com/in/mg530",
+    "github": "https://github.com/MG-530"
+  },
+  "resumeFile": "assets/resume.pdf",
+  "skills": {
+    "core": ["Python (Advanced)", "Robotic Process Automation (RPA)", "Machine Learning (ML)", "Data Scraping", "API Development (REST)", "Full-Stack Web Development"],
+    "frameworks": ["Django", "Flask", "TensorFlow", "PyTorch", "scikit-learn", "OpenCV"],
+    "databases": ["PostgreSQL", "SQLite", "Docker", "Git", "Selenium", "Arch Linux"],
+    "languages": [
+      { "name": "Python", "level": "Advanced" },
+      { "name": "JavaScript", "level": "Intermediate" },
+      { "name": "Rust", "level": "Basic" }
+    ]
+  },
+  "education": {
+    "degree": "Bachelor of Science: Computer Science",
+    "university": "University of Guilan, Iran",
+    "period": "October 2022 - February 2026",
+    "gpa": "16.24 / 20",
+    "coursework": ["Data Structures", "Algorithms", "Software Engineering", "Database Systems", "Artificial Intelligence", "Machine Learning"]
+  }
+}

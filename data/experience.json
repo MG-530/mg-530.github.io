@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "role": "RPA Developer",
+    "type": "Freelance/Contract",
+    "company": "Zanjan Science and Technology Park",
+    "period": "June 2025 - Present",
+    "duration": "7 months",
+    "location": "Iran",
+    "description": "Designed and developed automation systems for sales data integration and customer analysis.",
+    "highlights": [
+      "Designed and developed a web-based system to integrate, analyze, and reconcile sales and banking data, eliminating 100% manual data entry and reducing operational errors by 20%.",
+      "Built an intelligent sales assistant system that automated customer data scraping and analysis, resulting in 10% higher call targeting accuracy and a 5% increase in conversion rate."
+    ],
+    "skills": ["Python", "Django", "RPA", "Data Scraping", "Selenium", "PostgreSQL"]
+  },
+  {
+    "id": 2,
+    "role": "Data Scraping & Integration Specialist",
+    "type": "Freelance/Part-time Project",
+    "company": "eltshop.ir",
+    "period": "February 2025 - November 2025",
+    "duration": "10 months",
+    "location": "Iran",
+    "description": "Built data pipelines and AI modules for educational content processing and metadata generation.",
+    "highlights": [
+      "Established a data pipeline for scraping and normalizing educational content from various online sources, reducing data access time by 70% and tripling (3x) the processed data volume.",
+      "Designed and implemented AI modules to automatically generate new metadata fields, enriching training datasets."
+    ],
+    "skills": ["Python", "Data Scraping", "AI/ML", "Pandas", "NumPy"]
+  },
+  {
+    "id": 3,
+    "role": "WordPress Developer",
+    "type": "Full-time",
+    "company": "Arsham",
+    "period": "March 2021 - August 2023",
+    "duration": "2 years, 5 months",
+    "location": "Iran",
+    "description": "Customized and developed WordPress themes and managed multiple e-commerce and corporate websites.",
+    "highlights": [
+      "Customized and developed WordPress themes using Elementor and custom code (PHP, HTML, CSS) to address specific client requirements and fix detailed issues.",
+      "Managed and developed content for multiple e-commerce and corporate websites."
+    ],
+    "skills": ["WordPress", "PHP", "HTML", "CSS", "Elementor"]
+  }
+]
