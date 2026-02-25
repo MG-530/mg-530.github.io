@@ -115,10 +115,10 @@
   },
   {
     "id": 4,
-    "name": "Energy Consumption Management System",
+    "name": "Intelligent energy management and optimization system",
     "client": "Private Company",
     "period": "December 2024 - February 2025",
-    "description": "An automation-focused energy consumption management system developed for a private organization. The platform integrates with a primary external system to securely download periodic PDF reports, extract structured numerical data, and process it using custom analytical formulas. Based on calculated metrics and optimization models, the system generates actionable energy efficiency recommendations for end users. The solution includes automated authentication handling, session persistence, caching mechanisms, PDF parsing, and data processing pipelines to streamline reporting and reduce manual intervention.",
+    "description": "Developed an automation-driven energy consumption management platform for a private organization, integrating with an external utility system to securely authenticate, download periodic electricity bill PDFs, and extract structured consumption data. Implemented custom data processing pipelines, PDF parsing, caching, and session management to automate reporting workflows. Designed analytical models to calculate optimal consumption metrics, cost optimization, and energy efficiency recommendations, significantly reducing manual processing and improving decision-making for energy management",
     "thumbnail": "assets/projects/energy-thumb.png",
     "gallery": [
       "assets/projects/energy1.png",
