@@ -69,6 +69,10 @@
       {
         "label": "Python",
         "type": "skill"
+      },
+      {
+        "label": "Open Source",
+        "type": "skill"
       }
     ]
   },
@@ -115,7 +119,7 @@
   },
   {
     "id": 4,
-    "name": "Intelligent energy management and optimization system",
+    "name": "VoltOptima (Intelligent energy management and optimization system)",
     "client": "Private Company",
     "period": "December 2024 - February 2025",
     "description": "Developed an automation-driven energy consumption management platform for a private organization, integrating with an external utility system to securely authenticate, download periodic electricity bill PDFs, and extract structured consumption data. Implemented custom data processing pipelines, PDF parsing, caching, and session management to automate reporting workflows. Designed analytical models to calculate optimal consumption metrics, cost optimization, and energy efficiency recommendations, significantly reducing manual processing and improving decision-making for energy management",
@@ -218,6 +222,44 @@
       },
       {
         "label": "AI/ML",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Yudbuy",
+    "client": "yudbuy.com",
+    "period": "June 2022 – August 2022",
+    "description": "Designed and implemented pages for a WordPress e-commerce site using Elementor, focusing on layout, UX, and responsive design. The site is no longer live, and all content, branding, and ownership remain with the client.",
+    "thumbnail": "assets/projects/yudbuy-thumb.jpg",
+    "gallery": [
+      "assets/projects/yudbuy1.png"
+    ],
+    "visibility": "private",
+    "links": {
+      "live": null,
+      "github": null
+    },
+    "tags": [
+      {
+        "label": "Completed",
+        "type": "status"
+      },
+      {
+        "label": "WordPress",
+        "type": "skill"
+      },
+      {
+        "label": "Elementor",
+        "type": "skill"
+      },
+      {
+        "label": "E-commerce",
+        "type": "skill"
+      },
+      {
+        "label": "Web Design",
         "type": "skill"
       }
     ]
