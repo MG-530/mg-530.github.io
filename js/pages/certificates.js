@@ -1,7 +1,4 @@
-// ذخیره داده‌ها برای دسترسی در مدال
 let certificatesData = [];
-
-// تنظیمات رنگ تگ‌ها (کپی شده از بخش پروژه‌ها برای یکپارچگی)
 const TAG_COLORS = [
   { color: '#3b82f6', bg: 'rgba(59, 130, 246, 0.1)', border: 'rgba(59, 130, 246, 0.25)' },
   { color: '#8b5cf6', bg: 'rgba(139, 92, 246, 0.1)', border: 'rgba(139, 92, 246, 0.25)' },
@@ -24,7 +21,6 @@ function getTagHtml(tagLabel) {
   return `<span class="tag" style="color:${c.color}; background:${c.bg}; border:1px solid ${c.border}">${tagLabel}</span>`;
 }
 
-// تابع باز کردن مدال برای گواهی
 function openCertModal(cert) {
   const existingModal = document.querySelector('.modal-overlay');
   if (existingModal) existingModal.remove();
@@ -121,7 +117,6 @@ export async function renderCertificates() {
   `;
 }
 
-// تابع فعال‌سازی رویدادها (باید بعد از درج در DOM فراخوانی شود)
 export function initCertificatesPage() {
     const cards = document.querySelectorAll('.cert-card');
     cards.forEach(card => {
