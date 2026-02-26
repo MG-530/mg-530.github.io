@@ -263,5 +263,52 @@
         "type": "skill"
       }
     ]
-  }
+  },
+  {
+  "id": 8,
+  "name": "Academic Class Management System",
+  "client": "Arsham",
+  "period": "April 2022 - June 2022",
+  "description": "Developed a private web-based system for managing and evaluating academic classes. The platform included session attendance tracking, student exercise submission, Q&A, grading exercises, and comprehensive student information management. The system focused on providing an intuitive UX/UI and was built using Django.",
+  "thumbnail": "assets/projects/class-management-thumb.png",
+  "gallery": [
+    "assets/projects/class-management1.jpg",
+    "assets/projects/class-management2.jpg",
+    "assets/projects/class-management3.jpg",
+    "assets/projects/class-management4.jpg",
+    "assets/projects/class-management5.jpg",
+    "assets/projects/class-management6.jpg"
+  ],
+  "visibility": "private",
+  "links": {
+    "live": null,
+    "github": null
+  },
+  "tags": [
+    {
+      "label": "Completed",
+      "type": "status"
+    },
+    {
+        "label": "Python",
+        "type": "skill"
+      },
+    {
+      "label": "Django",
+      "type": "skill"
+    },
+    {
+      "label": "UX/UI",
+      "type": "skill"
+    },
+    {
+      "label": "Web App",
+      "type": "skill"
+    },
+    {
+      "label": "Education",
+      "type": "skill"
+    }
+  ]
+}
 ]
