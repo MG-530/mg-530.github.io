@@ -223,14 +223,25 @@ function openModal(project) {
   if (images.length > 1) {
     const imgEl = modal.querySelector('#modal-gallery-img');
     const dots = modal.querySelectorAll('.gallery-dot');
+    const counter = document.createElement('div');
+    counter.className = 'gallery-counter';
+    const gallery = modal.querySelector('#modal-gallery');
+    gallery.appendChild(counter);
+
     function goToImage(idx) {
       currentImg = idx;
-      imgEl.src = images[idx];
+      imgEl.style.opacity = '0';
+      setTimeout(() => {
+        imgEl.src = images[idx];
+        imgEl.style.opacity = '1';
+      }, 100);
       dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+      counter.textContent = (idx + 1) + ' / ' + images.length;
     }
     modal.querySelector('#gallery-prev').addEventListener('click', (e) => { e.stopPropagation(); goToImage((currentImg - 1 + images.length) % images.length); });
     modal.querySelector('#gallery-next').addEventListener('click', (e) => { e.stopPropagation(); goToImage((currentImg + 1) % images.length); });
     dots.forEach(dot => { dot.addEventListener('click', (e) => { e.stopPropagation(); goToImage(parseInt(dot.dataset.index)); }); });
+    goToImage(0);
   }
 
   function closeModal() {
@@ -241,7 +252,11 @@ function openModal(project) {
 
   closeBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-  document.addEventListener('keydown', function escHandler(e) { if (e.key === 'Escape') { closeModal(); document.removeEventListener('keydown', escHandler); } });
+  document.addEventListener('keydown', function galleryHandler(e) {
+    if (e.key === 'Escape') { closeModal(); document.removeEventListener('keydown', galleryHandler); }
+    if (images.length > 1 && e.key === 'ArrowLeft') { e.preventDefault(); goToImage((currentImg - 1 + images.length) % images.length); }
+    if (images.length > 1 && e.key === 'ArrowRight') { e.preventDefault(); goToImage((currentImg + 1) % images.length); }
+  });
 }
 
 export async function renderProjects() {
