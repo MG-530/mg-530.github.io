@@ -34,7 +34,7 @@ async function router() {
   const path = getRoute();
   const route = routes[path] || routes['/'];
 
-  app.innerHTML = '';
+  app.innerHTML = '<div class="page-loading"><div class="loading-spinner"></div></div>';
   app.classList.remove('page-enter');
   void app.offsetWidth;
 

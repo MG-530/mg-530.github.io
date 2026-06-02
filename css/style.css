@@ -291,6 +291,26 @@ html[data-theme="light"] .theme-toggle .icon-moon {
   min-height: calc(100vh - 64px - 80px);
 }
 
+.page-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 64px - 80px - 80px);
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 .page {
   max-width: 1100px;
   margin: 0 auto;
