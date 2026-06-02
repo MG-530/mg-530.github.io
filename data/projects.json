@@ -119,6 +119,51 @@
   },
   {
     "id": 4,
+    "name": "UniSchedule Planner (Frontend)",
+    "client": "University Project",
+    "period": "October 2025 - December 2025",
+    "description": "A frontend-only university course selection management interface built with React. The system was designed to assist in organizing course schedules by taking instructor names, class definitions, class types, and conflict constraints into account. It focused on providing an intuitive UI for simulating and planning course enrollment scenarios without backend integration.",
+    "thumbnail": "assets/projects/unischedule-thumb.png",
+    "gallery": [
+      "assets/projects/unischedule1.png",
+      "assets/projects/unischedule2.png",
+      "assets/projects/unischedule3.png",
+      "assets/projects/unischedule4.png",
+      "assets/projects/unischedule5.png",
+      "assets/projects/unischedule6.png",
+      "assets/projects/unischedule7.png",
+      "assets/projects/unischedule8.png"
+    ],
+    "visibility": "private",
+    "links": {
+      "live": null,
+      "github": null
+    },
+    "tags": [
+      {
+        "label": "Completed",
+        "type": "status"
+      },
+      {
+        "label": "React",
+        "type": "skill"
+      },
+      {
+        "label": "Frontend",
+        "type": "skill"
+      },
+      {
+        "label": "UI Design",
+        "type": "skill"
+      },
+      {
+        "label": "University",
+        "type": "skill"
+      }
+    ]
+  },
+  {
+    "id": 5,
     "name": "VoltOptima (Intelligent energy management and optimization system)",
     "client": "Private Company",
     "period": "December 2024 - February 2025",
@@ -159,7 +204,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "Soybean Image Classification",
     "client": "University Project",
     "period": "2024",
@@ -191,7 +236,7 @@
     ]
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "Educational Content Data Pipeline",
     "client": "eltshop.ir",
     "period": "February 2025 - November 2025",
@@ -227,7 +272,7 @@
     ]
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "Yudbuy",
     "client": "yudbuy.com",
     "period": "June 2022 – August 2022",
@@ -265,7 +310,7 @@
     ]
   },
   {
-  "id": 8,
+  "id": 9,
   "name": "Academic Class Management System",
   "client": "Arsham",
   "period": "April 2022 - June 2022",
