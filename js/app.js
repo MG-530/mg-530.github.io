@@ -1,6 +1,6 @@
 import { renderHome } from './pages/home.js';
 import { renderProjects, initProjectsPage } from './pages/projects.js';
-import { renderCertificates,initCertificatesPage } from './pages/certificates.js';
+import { renderCertificates, initCertificatesPage } from './pages/certificates.js';
 import { renderExperience } from './pages/experience.js';
 
 import { initTheme } from './theme.js';
