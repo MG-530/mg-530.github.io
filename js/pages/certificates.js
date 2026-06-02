@@ -84,6 +84,17 @@ function openCertModal(cert) {
   const closeBtn = modal.querySelector('#cert-modal-close');
   if (closeBtn) closeBtn.focus();
 
+  const imgEl = modal.querySelector('.modal-gallery img');
+  const gallery = modal.querySelector('.modal-gallery');
+  if (imgEl) {
+    imgEl.style.cursor = 'zoom-in';
+    imgEl.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (gallery.requestFullscreen) gallery.requestFullscreen();
+      else if (gallery.webkitRequestFullscreen) gallery.webkitRequestFullscreen();
+    });
+  }
+
   const closeModal = () => {
     modal.style.opacity = '0';
     setTimeout(() => { modal.remove(); document.body.classList.remove('modal-open'); if (prevFocus) prevFocus.focus(); }, 200);
