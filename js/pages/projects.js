@@ -220,28 +220,46 @@ function openModal(project) {
   if (closeBtn) closeBtn.focus();
 
   let currentImg = 0;
-  if (images.length > 1) {
-    const imgEl = modal.querySelector('#modal-gallery-img');
-    const dots = modal.querySelectorAll('.gallery-dot');
-    const counter = document.createElement('div');
-    counter.className = 'gallery-counter';
-    const gallery = modal.querySelector('#modal-gallery');
-    gallery.appendChild(counter);
+  const imgEl = modal.querySelector('#modal-gallery-img');
+  let dots, counter;
+  const gallery = modal.querySelector('#modal-gallery');
 
-    function goToImage(idx) {
-      currentImg = idx;
-      imgEl.style.opacity = '0';
-      setTimeout(() => {
-        imgEl.src = images[idx];
-        imgEl.style.opacity = '1';
-      }, 100);
-      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
-      counter.textContent = (idx + 1) + ' / ' + images.length;
-    }
+  function goToImage(idx) {
+    if (!images.length) return;
+    currentImg = idx;
+    imgEl.style.opacity = '0';
+    setTimeout(() => {
+      imgEl.src = images[idx];
+      imgEl.style.opacity = '1';
+    }, 100);
+    if (dots) dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+    if (counter) counter.textContent = (idx + 1) + ' / ' + images.length;
+  }
+
+  if (images.length > 1) {
+    dots = modal.querySelectorAll('.gallery-dot');
+    counter = document.createElement('div');
+    counter.className = 'gallery-counter';
+    gallery.appendChild(counter);
     modal.querySelector('#gallery-prev').addEventListener('click', (e) => { e.stopPropagation(); goToImage((currentImg - 1 + images.length) % images.length); });
     modal.querySelector('#gallery-next').addEventListener('click', (e) => { e.stopPropagation(); goToImage((currentImg + 1) % images.length); });
     dots.forEach(dot => { dot.addEventListener('click', (e) => { e.stopPropagation(); goToImage(parseInt(dot.dataset.index)); }); });
     goToImage(0);
+  }
+
+  if (imgEl) {
+    imgEl.style.cursor = 'zoom-in';
+    imgEl.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (gallery && gallery.requestFullscreen) {
+        gallery.requestFullscreen();
+      } else if (gallery && gallery.webkitRequestFullscreen) {
+        gallery.webkitRequestFullscreen();
+      }
+    });
+    document.addEventListener('fullscreenchange', () => {
+      if (!document.fullscreenElement) imgEl.style.cursor = 'zoom-in';
+    });
   }
 
   function closeModal() {
