@@ -140,9 +140,29 @@ function renderFilterBar(projects) {
   return '<div class="filter-bar fade-in">' + allChip + publicChip + privateChip + statusChips + selectDropdown + '</div>';
 }
 
+function trapFocus(container) {
+  const focusable = container.querySelectorAll(
+    'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"]):not([disabled])'
+  );
+  if (!focusable.length) return null;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  function handler(e) {
+    if (e.key !== 'Tab') return;
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  }
+  container.addEventListener('keydown', handler);
+  return handler;
+}
+
 function openModal(project) {
   const existingModal = document.querySelector('.modal-overlay');
   if (existingModal) existingModal.remove();
+  const prevFocus = document.activeElement;
 
   const images = [];
   if (project.thumbnail) images.push(project.thumbnail);
@@ -195,6 +215,10 @@ function openModal(project) {
   document.body.appendChild(modal);
   document.body.classList.add('modal-open');
 
+  const focusHandler = trapFocus(modal);
+  const closeBtn = modal.querySelector('#modal-close');
+  if (closeBtn) closeBtn.focus();
+
   let currentImg = 0;
   if (images.length > 1) {
     const imgEl = modal.querySelector('#modal-gallery-img');
@@ -212,10 +236,10 @@ function openModal(project) {
   function closeModal() {
     modal.style.opacity = '0';
     modal.querySelector('.modal-content').style.transform = 'scale(0.95) translateY(10px)';
-    setTimeout(() => { modal.remove(); document.body.classList.remove('modal-open'); }, 200);
+    setTimeout(() => { modal.remove(); document.body.classList.remove('modal-open'); if (prevFocus) prevFocus.focus(); }, 200);
   }
 
-  modal.querySelector('#modal-close').addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
   document.addEventListener('keydown', function escHandler(e) { if (e.key === 'Escape') { closeModal(); document.removeEventListener('keydown', escHandler); } });
 }

@@ -21,9 +21,29 @@ function getTagHtml(tagLabel) {
   return `<span class="tag" style="color:${c.color}; background:${c.bg}; border:1px solid ${c.border}">${tagLabel}</span>`;
 }
 
+function trapFocus(container) {
+  const focusable = container.querySelectorAll(
+    'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"]):not([disabled])'
+  );
+  if (!focusable.length) return null;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  function handler(e) {
+    if (e.key !== 'Tab') return;
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  }
+  container.addEventListener('keydown', handler);
+  return handler;
+}
+
 function openCertModal(cert) {
   const existingModal = document.querySelector('.modal-overlay');
   if (existingModal) existingModal.remove();
+  const prevFocus = document.activeElement;
 
   const tagsHtml = cert.tags ? cert.tags.map(t => getTagHtml(t)).join('') : '';
   const verifyLink = cert.verifyUrl 
@@ -60,13 +80,18 @@ function openCertModal(cert) {
   document.body.appendChild(modal);
   document.body.classList.add('modal-open');
 
+  const focusHandler = trapFocus(modal);
+  const closeBtn = modal.querySelector('#cert-modal-close');
+  if (closeBtn) closeBtn.focus();
+
   const closeModal = () => {
     modal.style.opacity = '0';
-    setTimeout(() => { modal.remove(); document.body.classList.remove('modal-open'); }, 200);
+    setTimeout(() => { modal.remove(); document.body.classList.remove('modal-open'); if (prevFocus) prevFocus.focus(); }, 200);
   };
 
-  modal.querySelector('#cert-modal-close').addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function escHandler(e) { if (e.key === 'Escape') { closeModal(); document.removeEventListener('keydown', escHandler); } });
 }
 
 function renderCertCard(cert, index) {
